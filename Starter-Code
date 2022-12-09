@@ -1,0 +1,32 @@
+15.Create a new list with the converted numbers. If something cannot be converted, skip it and append nothing to the new list.
+
+Hint: Use a try-except statement, see here or here.
+
+Answer:
+
+corrupted = ['!1', '23.1', '23.4.5', '??12', '.12', '12-12', '-11.1', '0-1', '*12.1', '1000']
+new_corrupted = []
+for item in corrupted:
+    try:
+        my_num = float(item) 
+        print('{} can be converted'.format(item))
+        new_corrupted.append(item)
+    except:
+        print('{} can not be converted'.format(item))
+print(new_corrupted)    
+
+
+16. While loops and strings.
+Iterate over the following sentence over and over again, counting the number of vowels in the sentence until you have counted 1 million vowels. Print out the number of iterations it took to reach one million.
+Answer:
+sentence = "IF I PRACTICE A LOT I WILL SOON BECOME A VERY GOOD DATA ANALYST"
+i = 0 
+count_vowel = 0
+for i in sentence:
+    if i in ('A','E','I','O','U'):
+        count_vowel += 1
+print(count_vowel)
+22
+count_read = 1000000/22
+print(round(count_read))
+45455
