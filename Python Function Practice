@@ -1,0 +1,20 @@
+1.  Write a Python function to find the Max of three numbers.
+Solution : 
+def find_max(my_list):
+  print(max(my_list))
+
+find_max([2,4,6])
+
+2.Write a Python function to sum all the numbers in a list. Go to the editor
+Sample List : (8, 2, 3, 0, 7)
+Expected Output : 20
+
+Solution:
+def total(my_list):
+  sum_list = 0
+  for i in my_list:
+    sum_list = sum_list + i 
+  print(sum_list)
+
+sample_list =[8,2,3,0,7]
+total(sample_list)
