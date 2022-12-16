@@ -76,3 +76,23 @@ def check_range(num,ran):
       print("{} is in the list.".format(num))
 check_range(4,[1,2,3,4,5])
 
+
+7. Write a Python function that accepts a string and calculate the number of upper case letters and lower case letters. Go to the editor
+Sample String : 'The quick Brow Fox'
+Expected Output :
+No. of Upper case characters : 3
+No. of Lower case Characters : 12
+
+Solution:
+def count_case(my_string):
+  upper_count = 0
+  lower_count = 0 
+  for i in my_string:
+    if i.isupper() == True:
+      upper_count += 1
+    elif i.islower() == True:
+      lower_count += 1
+  print("No. of Upper case characters : {}".format(upper_count))
+  print("No. of Lower case Characters : {}".format(lower_count))
+
+count_case('The quick Brow Fox')
