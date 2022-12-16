@@ -66,3 +66,13 @@ def fac_func(num):
   print(result)
 
 fac_func(3)
+
+
+6. Write a Python function to check whether a number falls in a given range. 
+Solution:
+def check_range(num,ran):
+  for i in ran:
+    if i == num:
+      print("{} is in the list.".format(num))
+check_range(4,[1,2,3,4,5])
+
