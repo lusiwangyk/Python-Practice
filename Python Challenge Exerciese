@@ -1,0 +1,27 @@
+Challenge 1: Largest Palindrome
+A palindromic number reads the same both ways. For example, 1234321 is a palindrome. The largest palindrome made from the product of two two-digit numbers is 9009 = 91 × 99. Find the largest palindrome made from the product of two three-digit numbers. 
+
+Solution 1:
+def find_palindrome(n):
+    tem = n 
+    rev = 0
+    while(n>0):
+        rem = n % 10
+        rev = rev * 10 + rem
+        n = n // 10
+     
+    if (tem == rev):
+        return True
+    else:
+        return False
+
+
+largest_palindrome = 9009
+for x in range(100,1000):
+    for y in range(100,1000):
+        if find_palindrome(x * y) == True:
+            if (x * y) > largest_palindrome:
+                largest_palindrome = x * y
+                s = x
+                m = y
+print(largest_palindrome,s,m)
