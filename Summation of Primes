@@ -1,0 +1,26 @@
+The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17. Find the sum of all the primes below 2,000. 
+
+Solution:
+prime_list = [2,3,5,7,9]
+for num in range(2,2000):
+    if (num % 10 == 1 and num % 3 != 0 and num % 7 != 0):
+        prime_list.append(num)
+    elif(num % 10 == 3 and num % 3 != 0):
+        prime_list.append(num)
+    elif(num % 10 == 7 and num % 3 != 0 and num % 7 != 0):
+        prime_list.append(num)
+    elif(num % 10 == 9 and num % 3 != 0 and num % 7 != 0):
+        prime_list.append(num)  
+        
+        
+               
+for s in prime_list:
+    for m in prime_list:
+        if (m != s and m % s == 0):
+            prime_list.remove(m)
+print(prime_list)
+
+sum_primes = sum(prime_list)
+print(sum_primes)
+
+Answer : 277050 
