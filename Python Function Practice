@@ -96,3 +96,27 @@ def count_case(my_string):
   print("No. of Lower case Characters : {}".format(lower_count))
 
 count_case('The quick Brow Fox')
+
+
+8. Write a Python function that takes a list and returns a new list with unique elements of the first list. Go to the editor
+Sample List : [1,2,3,3,3,3,4,5]
+Unique List : [1, 2, 3, 4, 5]
+
+Solution:
+def find_uniq(my_list):
+  new_list = []
+  i = 0
+  while i < len(my_list):
+    new_list.append(my_list[i])
+    j = i 
+    while j < len(my_list)-1:
+      if my_list[j] == my_list[j+1]:
+        j += 1
+      else:
+        break
+    i = j + 1
+
+  print(new_list)  
+  
+sample_list = [1,2,3,3,3,3,4,5]
+find_uniq(sample_list)
